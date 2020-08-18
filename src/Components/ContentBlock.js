@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
+import { useState } from 'react';
+
 
 
 export const ContentBlock = (props) => {
@@ -12,12 +14,28 @@ export const ContentBlock = (props) => {
         props.handletitleform(!props.titleform);
         props.handlebuttonform(!props.buttonform);
         props.handleinpform(!props.showinp);
-      }}>{props.signbutton ? 'Create Account' : 'Sign In'}</button>
+      }}>{props.signbutton ? 'Create Account' : 'Sign In'}
+      </button>
     </WraperContainer>
   )
 }
 
+const rotate = keyframes`
+  from {
+    right:0%;
+  }
+
+  to {
+    right:65%;
+  }
+`;
+// const bobo = {
+//   color: 'red'
+// }
+
 const WraperContainer = styled.div`
+/* animation:${rotate} 1s; */
+position:relative;
 width:35%;
 height:100%;
 display:flex;
@@ -26,5 +44,6 @@ align-items:center;
 justify-content:center;
 background-color:lightgreen;
 `;
+
 
 

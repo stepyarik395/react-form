@@ -11,6 +11,7 @@ const App = () => {
   const [titleform, handletitleform] = useState(true);
   const [buttonform, handlebuttonform] = useState(true);
   const [showinp, handleinpform] = useState(false);
+  const [active, handleactive] = useState(false);
   return (
     <Container>
       <MainWrapper>
@@ -20,6 +21,8 @@ const App = () => {
           showinp={showinp}
         />
         <ContentBlock
+          active={active}
+          handleactive={handleactive}
           showinp={showinp}
           titleform={titleform}
           buttonform={buttonform}
