@@ -3,15 +3,33 @@ import './App.css';
 import styled from 'styled-components'
 import { Form } from './Components/Form'
 import { ContentBlock } from './Components/ContentBlock'
-
-
+import { useState } from 'react';
 
 const App = () => {
+  const [sgintitle, handletitle] = useState(true);
+  const [signbutton, handlebutton] = useState(true);
+  const [titleform, handletitleform] = useState(true);
+  const [buttonform, handlebuttonform] = useState(true);
+  const [showinp, handleinpform] = useState(false);
   return (
     <Container>
       <MainWrapper>
-        <Form />
-        <ContentBlock />
+        <Form
+          titleform={titleform}
+          buttonform={buttonform}
+          showinp={showinp}
+        />
+        <ContentBlock
+          showinp={showinp}
+          titleform={titleform}
+          buttonform={buttonform}
+          sgintitle={sgintitle}
+          handlebutton={handlebutton}
+          handletitle={handletitle}
+          signbutton={signbutton}
+          handletitleform={handletitleform}
+          handlebuttonform={handlebuttonform}
+          handleinpform={handleinpform} />
       </MainWrapper>
     </Container>
   );
