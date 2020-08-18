@@ -1,13 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components'
+import { Form } from './Components/Form'
+import { ContentBlock } from './Components/ContentBlock'
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <Container>
+      <MainWrapper>
+        <Form />
+        <ContentBlock />
+      </MainWrapper>
+    </Container>
   );
 }
 
 export default App;
+const Container = styled.div`
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+`;
+
+const MainWrapper = styled.div`
+display:flex;
+width:1250px;
+height:60vh;
+background-image: url(./geometric.jpg);
+background-size:cover;
+`;
