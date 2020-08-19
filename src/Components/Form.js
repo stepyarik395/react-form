@@ -5,7 +5,7 @@ import { FromHideContent } from './FromHideContent'
 
 export const Form = (props) => {
   return (
-    <WrapperFrom>
+    <WrapperFrom className={props.activef ? 'active1' : 'disabler2'}>
       <TitleForm>{props.titleform ? 'Sign-in' : 'Register account'}</TitleForm>
       {props.showinp ? <FromHideContent /> : null}
       <div>
@@ -23,6 +23,7 @@ export const Form = (props) => {
   )
 }
 const WrapperFrom = styled.div`
+position:relative;
 display:flex;
 flex-direction:column;
 align-items:center;

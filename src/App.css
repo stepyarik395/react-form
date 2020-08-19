@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+.active {
+  animation: rotate 1s;
+
+  animation-fill-mode: forwards;
+}
+.disabler {
+  animation: rotate2 1s;
+
+  animation-fill-mode: forwards;
+}
+.active1 {
+  animation: rotateform 1s;
+
+  animation-fill-mode: forwards;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.disabler2 {
+  animation: rotateform2 1s;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  animation-fill-mode: forwards;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes rotate {
   from {
-    transform: rotate(0deg);
+    right: 0;
   }
   to {
-    transform: rotate(360deg);
+    right: 65%;
+  }
+}
+@keyframes rotate2 {
+  from {
+    right: 65%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes rotateform {
+  from {
+    left: 0;
+  }
+  to {
+    left: 35%;
+  }
+}
+@keyframes rotateform2 {
+  from {
+    left: 35%;
+  }
+  to {
+    left: 0;
   }
 }

@@ -12,15 +12,19 @@ const App = () => {
   const [buttonform, handlebuttonform] = useState(true);
   const [showinp, handleinpform] = useState(false);
   const [active, handleactive] = useState(false);
+  const [activef, handleactivef] = useState(false);
   return (
     <Container>
       <MainWrapper>
         <Form
+          activef={activef}
           titleform={titleform}
           buttonform={buttonform}
           showinp={showinp}
         />
         <ContentBlock
+          activef={activef}
+          handleactivef={handleactivef}
           active={active}
           handleactive={handleactive}
           showinp={showinp}

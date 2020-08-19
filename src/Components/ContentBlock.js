@@ -4,9 +4,11 @@ import { useState } from 'react';
 
 
 
+
+
 export const ContentBlock = (props) => {
   return (
-    <WraperContainer>
+    <WraperContainer className={props.active ? 'active' : 'disabler'}>
       <h1>{props.sgintitle ? 'Wellcom Back' : 'Hellow New Friend'}</h1>
       <button onClick={() => {
         props.handlebutton(!props.signbutton);
@@ -14,27 +16,16 @@ export const ContentBlock = (props) => {
         props.handletitleform(!props.titleform);
         props.handlebuttonform(!props.buttonform);
         props.handleinpform(!props.showinp);
+        props.handleactive(!props.active)
+        props.handleactivef(!props.activef)
       }}>{props.signbutton ? 'Create Account' : 'Sign In'}
       </button>
-    </WraperContainer>
+    </WraperContainer >
   )
 }
 
-const rotate = keyframes`
-  from {
-    right:0%;
-  }
-
-  to {
-    right:65%;
-  }
-`;
-// const bobo = {
-//   color: 'red'
-// }
 
 const WraperContainer = styled.div`
-/* animation:${rotate} 1s; */
 position:relative;
 width:35%;
 height:100%;
