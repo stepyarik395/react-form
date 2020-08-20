@@ -10,7 +10,6 @@ export const ContentBlock = (props) => {
       </button>
     </WraperContainer >
   )
-
 }
 const WraperContainer = styled.div`
 transition: 2s;

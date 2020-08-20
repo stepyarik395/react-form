@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import { FromHideContent } from './FromHideContent'
 import { useEffect } from 'react';
 
-
 export const Form = (props) => {
-
   return (
     <WrapperFrom className={props.welcome ? null : 'active1'}>
       <TitleForm>{props.welcome ? 'Sign-in' : 'Register account'}</TitleForm>
