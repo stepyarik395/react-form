@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components'
 import { FromHideContent } from './FromHideContent'
+import { useEffect } from 'react';
 
 
 export const Form = (props) => {
+
   return (
-    <WrapperFrom className={props.activef ? 'active1' : 'disabler2'}>
-      <TitleForm>{props.titleform ? 'Sign-in' : 'Register account'}</TitleForm>
-      {props.showinp ? <FromHideContent /> : null}
+    <WrapperFrom className={props.welcome ? null : 'active1'}>
+      <TitleForm>{props.welcome ? 'Sign-in' : 'Register account'}</TitleForm>
+      {props.welcome ? null : <FromHideContent />}
       <div>
         <LabelText>Email:</LabelText>
         <Input placeholder="email" type="email" />
@@ -17,20 +19,22 @@ export const Form = (props) => {
         <Input placeholder="password" type="password" />
       </div>
       <div>
-        <ButtonSubmit type="submit">{props.buttonform ? 'Sign In' : 'Sign Up'}</ButtonSubmit>
+        <ButtonSubmit type="submit">{props.welcome ? 'Sign In' : 'Sign Up'}</ButtonSubmit>
       </div>
     </WrapperFrom>
   )
 }
 const WrapperFrom = styled.div`
-position:relative;
+position:absolute;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
 background-color:lightpink;
-width:65%;
-height:100%;
+width: 65%;
+right: 0;
+height: 100%;
+transition:2s;
 `;
 export const Input = styled.input`
 min-width:300px;

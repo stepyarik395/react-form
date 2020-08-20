@@ -1,53 +1,7 @@
+
 .active {
-  animation: rotate 1s;
-
-  animation-fill-mode: forwards;
-}
-.disabler {
-  animation: rotate2 1s;
-
-  animation-fill-mode: forwards;
+  right: 0 !important;
 }
 .active1 {
-  animation: rotateform 1s;
-
-  animation-fill-mode: forwards;
-}
-
-.disabler2 {
-  animation: rotateform2 1s;
-
-  animation-fill-mode: forwards;
-}
-@keyframes rotate {
-  from {
-    right: 0;
-  }
-  to {
-    right: 65%;
-  }
-}
-@keyframes rotate2 {
-  from {
-    right: 65%;
-  }
-  to {
-    right: 0;
-  }
-}
-@keyframes rotateform {
-  from {
-    left: 0;
-  }
-  to {
-    left: 35%;
-  }
-}
-@keyframes rotateform2 {
-  from {
-    left: 35%;
-  }
-  to {
-    left: 0;
-  }
+  right: 35% !important;
 }

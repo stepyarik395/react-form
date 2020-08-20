@@ -6,37 +6,12 @@ import { ContentBlock } from './Components/ContentBlock'
 import { useState } from 'react';
 
 const App = () => {
-  const [sgintitle, handletitle] = useState(true);
-  const [signbutton, handlebutton] = useState(true);
-  const [titleform, handletitleform] = useState(true);
-  const [buttonform, handlebuttonform] = useState(true);
-  const [showinp, handleinpform] = useState(false);
-  const [active, handleactive] = useState(false);
-  const [activef, handleactivef] = useState(false);
+  const [welcome, handlewelcom] = useState(true)
   return (
     <Container>
       <MainWrapper>
-        <Form
-          activef={activef}
-          titleform={titleform}
-          buttonform={buttonform}
-          showinp={showinp}
-        />
-        <ContentBlock
-          activef={activef}
-          handleactivef={handleactivef}
-          active={active}
-          handleactive={handleactive}
-          showinp={showinp}
-          titleform={titleform}
-          buttonform={buttonform}
-          sgintitle={sgintitle}
-          handlebutton={handlebutton}
-          handletitle={handletitle}
-          signbutton={signbutton}
-          handletitleform={handletitleform}
-          handlebuttonform={handlebuttonform}
-          handleinpform={handleinpform} />
+        <Form welcome={welcome} />
+        <ContentBlock handlewelcom={handlewelcom} welcome={welcome} />
       </MainWrapper>
     </Container>
   );
@@ -51,6 +26,7 @@ align-items:center;
 `;
 
 const MainWrapper = styled.div`
+position:relative;
 display:flex;
 width:1250px;
 height:60vh;
